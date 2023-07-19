@@ -27,7 +27,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             console.log('DEBUG:', github.event)
-            console.log('DEBUG:', context.payload.workflow_run.pull_requests)
+            console.log('DEBUG:', context.payload)
             const pr = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
