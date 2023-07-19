@@ -4,7 +4,7 @@ name: "Automerge"
 on:
   # Automatically trigger it there are changes in repo
   pull_request:
-    branches: [ main ]
+    branches: [ '*' ]
 
   # Allow manually trigger
   workflow_dispatch:
@@ -17,9 +17,9 @@ jobs:
   Automerge:
     runs-on: ubuntu-latest
     # if: |
-      # github.event.workflow_run.event == 'pull_request' &&
-      # github.ref == 'refs/heads/main'
-    # github.event.workflow_run.conclusion == 'success' &&
+    #   github.event.workflow_run.event == 'pull_request' &&
+    #   github.ref == 'refs/heads/main'
+    #   github.event.workflow_run.conclusion == 'success' &&
     steps:
       - name: 'Merge PR'
         uses: actions/github-script@v6
