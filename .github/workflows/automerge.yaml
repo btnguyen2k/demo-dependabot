@@ -4,7 +4,7 @@ name: "Automerge"
 on:
   # Automatically trigger it there are changes in repo
   pull_request:
-    branches: [ main ]
+    branches: [ '*' ]
 
   # Allow manually trigger
   workflow_dispatch:
